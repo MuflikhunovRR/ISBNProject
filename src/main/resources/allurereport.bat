@@ -1,0 +1,1 @@
+allure serve D:\JAVA\Java_SRC\ISBNProject\target\allure-results

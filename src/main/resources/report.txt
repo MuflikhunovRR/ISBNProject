@@ -1,0 +1,10 @@
+Checking book ISBN = 9781259589331. Web service return: true
+Checking book ISBN = 9781259589317. Web service return: true
+Checking book ISBN = 9781789130515. Web service return: true
+Checking book ISBN = 9781532852701. Web service return: true
+Checking book ISBN = 9780997817225. Web service return: true
+Checking book ISBN = 9781985574304. Web service return: true
+Checking book ISBN = 9781985254602. Web service return: true
+Checking book ISBN = 9781330908884. Web service return: true
+Checking book ISBN = 9780071808552. Web service return: true
+Checking book ISBN = 9780071809252. Web service return: true
