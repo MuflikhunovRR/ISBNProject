@@ -7,6 +7,7 @@ public class Constants {
 
     public static final String URLSITE = "https://shop.harvard.com/search/site/java";
     public static final String FILEPATH = "D:\\JAVA\\Java_SRC\\ISBNProject\\src\\main\\resources\\report.txt";
+    public static final String FILEPATHHTML = "D:\\JAVA\\Java_SRC\\ISBNProject\\src\\main\\resources\\harvard.html";
     public static final String MONEYCODE = "$";
     public static final String STATUSMESSAGE = "OK";
     public static final String ADDTOCART = "Add to Cart";

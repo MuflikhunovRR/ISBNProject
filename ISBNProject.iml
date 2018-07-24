@@ -5,6 +5,7 @@
       <configuration>
         <fileset id="fileset" name="Application Config" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/application-config.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/db.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -51,7 +52,8 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.0.3.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:6.0.6" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.11" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.protobuf:protobuf-java:2.6.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.qameta.allure:allure-junit-platform:2.0-BETA19" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.qameta.allure:allure-java-commons:2.0-BETA19" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.google.guava:guava:19.0" level="project" />

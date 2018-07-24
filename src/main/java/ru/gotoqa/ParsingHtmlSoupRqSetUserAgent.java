@@ -13,13 +13,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import ru.gotoqa.models.ISBNService;
 
+import javax.sql.DataSource;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import static javax.script.ScriptEngine.FILENAME;
 import static ru.gotoqa.Constants.Constants.*;
 
 /**
@@ -31,6 +33,8 @@ public class ParsingHtmlSoupRqSetUserAgent {
     public static Document doc;
     public static Connection.Response response;
     public static ISBNService bean;
+    private static ClassPathXmlApplicationContext contextdb = new ClassPathXmlApplicationContext("db.xml");
+    NamedParameterJdbcTemplate nqu = new NamedParameterJdbcTemplate(contextdb.getBean(DataSource.class));
 
 
     @BeforeAll
@@ -39,8 +43,8 @@ public class ParsingHtmlSoupRqSetUserAgent {
         doc = Jsoup.connect(URLSITE)
                 .userAgent(USERAGENT)
                 .timeout(5000)
-                .cookie("cookiename", "val234")
-                .cookie("anothercookie", "ilovejsoup")
+                .cookie("cookiename", "roman")
+                .cookie("anothercookie", "gotoqa")
                 .referrer("http://google.com")
                 .header("headersecurity", "xyz123")
                 .get();
@@ -88,6 +92,7 @@ public class ParsingHtmlSoupRqSetUserAgent {
         }
     }
 
+
     @Test
     @DisplayName("Test ID = 4. Check the Title Page.")
     public void checkTitlePageTest() {
@@ -106,7 +111,7 @@ public class ParsingHtmlSoupRqSetUserAgent {
             LOGGER.trace("Book name: {}", replace2);
             Assertions.assertNotNull(replace2, "No book title.");
             Assertions.assertTrue(replace2.contains("Java"));
-            Assertions.assertTrue(replace2.contains("Paperback"));
+            //Assertions.assertTrue(replace2.contains("Paperback"));
         }
     }
 

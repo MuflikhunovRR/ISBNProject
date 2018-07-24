@@ -18,7 +18,11 @@ public class ParsingHtmlBook {
         @Test
         void test1() throws IOException {
         String url = "https://shop.harvard.com/search/site/java";
-        Document document = Jsoup.connect(url).get();
+        Document document = null;
+        if (!Jsoup.connect(url).get().equals(null)){
+                 document = Jsoup.connect(url).get();
+        }
+
 
 /*        //Parsing all info from page
         String bookPage = document.select("div.abaproduct-details").text();
